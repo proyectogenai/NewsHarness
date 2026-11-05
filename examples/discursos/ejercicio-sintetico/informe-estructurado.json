@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "source_sha256": "db55124c602d485e3d187a58daadab7619fa58b878fde77de0a4b8bc066e6d62",
+  "metadata": {
+    "title": "Ejercicio sintético de entrevista",
+    "speaker": "Persona ficticia",
+    "medium": "Medio ficticio",
+    "program": null,
+    "interviewer": null,
+    "emitted_at": "2026-02-01",
+    "source_url": null,
+    "duration_seconds": null,
+    "provenance": "synthetic_fixture"
+  },
+  "analysis_as_of": "2026-11-01",
+  "coverage": {
+    "scope": "full_source",
+    "limitations": [
+      "Inventario preparado a mano para pruebas: no demuestra extracción automática ni exhaustividad en discursos reales.",
+      "Sin audio ni timestamps; se usan offsets y párrafos."
+    ]
+  },
+  "human_decisions": [
+    {
+      "id": "H1",
+      "kind": "selection",
+      "actor": "Editora ficticia del fixture",
+      "decided_at": "2026-11-01",
+      "record_ref": {
+        "file": "decisiones-simuladas.md",
+        "locator": "selección-1"
+      },
+      "recorded_from": "synthetic_fixture",
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "outcome": "selected",
+      "snapshot_sha256": null
+    },
+    {
+      "id": "H2",
+      "kind": "review",
+      "actor": "Editora ficticia del fixture",
+      "decided_at": "2026-11-01",
+      "record_ref": {
+        "file": "decisiones-simuladas.md",
+        "locator": "revisión-1"
+      },
+      "recorded_from": "synthetic_fixture",
+      "claim_ids": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "outcome": "approved",
+      "snapshot_sha256": "3eef5c205a1bed5ec6b47f473233bae796335bd980978af92eabcd03b516c01b"
+    }
+  ],
+  "selection_decision_id": "H1",
+  "review_decision_id": "H2",
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "Registro de prueba ficticio",
+      "title": "Viajes ficticios por año",
+      "location": {
+        "file": "registro-ficticio.csv",
+        "locator": "filas 2 y 3"
+      },
+      "published_at": "2026-01-10",
+      "consulted_at": "2026-11-01",
+      "reference_period": "2024–2025",
+      "version": "fixture-v1",
+      "valid_as_of": "2026-11-01",
+      "supersedes": null,
+      "limitations": "Datos inventados sólo para probar el flujo, no evidencia real.",
+      "independence_group": "fixture-registro",
+      "role": "primary",
+      "excerpt": "2024,100\n2025,120",
+      "observations": [
+        {
+          "value": "100",
+          "unit": "viajes",
+          "period": "2024",
+          "locator": "fila 2"
+        },
+        {
+          "value": "120",
+          "unit": "viajes",
+          "period": "2025",
+          "locator": "fila 3"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "fact",
+      "quote_original": "En 2025 registramos 120 viajes, frente a 100 en 2024.",
+      "anchor": {
+        "start": 152,
+        "end": 205,
+        "paragraph": 2,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": true,
+      "causal_claim": false,
+      "reference_period": "2024–2025",
+      "due_at": null,
+      "patterns": [],
+      "assessment": {
+        "status": "supported",
+        "rationale": "Coincide con dos filas del registro ficticio; no es validación de hechos reales.",
+        "evidence": [
+          {
+            "source_id": "S1",
+            "relation": "supports",
+            "reason": "El registro ficticio enumera 100 y 120 viajes para los períodos citados."
+          }
+        ],
+        "unresolved_reason": null,
+        "temporal_basis": "contemporaneous",
+        "revision_note": null,
+        "causal_support": "not_causal",
+        "causal_limitations": null,
+        "calculations": [
+          {
+            "expression": "(120 / 100 - 1) * 100",
+            "inputs": [
+              {
+                "source_id": "S1",
+                "observation_index": 0
+              },
+              {
+                "source_id": "S1",
+                "observation_index": 1
+              }
+            ],
+            "result": "20",
+            "unit": "porcentaje",
+            "note": "Cálculo propio con datos ficticios; el validador no ejecuta ni comprueba la fórmula."
+          }
+        ]
+      }
+    },
+    {
+      "id": "C2",
+      "kind": "projection",
+      "quote_original": "Si la demanda continúa, estimamos 150 viajes para 2027.",
+      "anchor": {
+        "start": 225,
+        "end": 280,
+        "paragraph": 3,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": true,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": null,
+      "patterns": [],
+      "assessment": {
+        "status": "awaiting_outcome",
+        "rationale": "El horizonte es futuro y no se aportó un modelo de proyección; no se juzga verdadero/falso.",
+        "evidence": [],
+        "unresolved_reason": "No hay supuestos ni resultado futuro disponible.",
+        "temporal_basis": "not_applicable",
+        "revision_note": null,
+        "causal_support": "not_causal",
+        "causal_limitations": null,
+        "calculations": []
+      }
+    },
+    {
+      "id": "C3",
+      "kind": "promise",
+      "quote_original": "Prometo publicar el registro mensual antes del 31 de diciembre de 2026.",
+      "anchor": {
+        "start": 282,
+        "end": 353,
+        "paragraph": 4,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": false,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": "2026-12-31",
+      "patterns": [],
+      "assessment": {
+        "status": "tracking",
+        "rationale": "El plazo de la promesa aún no venció; seguimiento separado.",
+        "evidence": [],
+        "unresolved_reason": "Plazo pendiente: 2026-12-31.",
+        "temporal_basis": "not_applicable",
+        "revision_note": null,
+        "causal_support": "not_causal",
+        "causal_limitations": null,
+        "calculations": []
+      }
+    },
+    {
+      "id": "C4",
+      "kind": "opinion",
+      "quote_original": "Creo que este es el mejor servicio del país.",
+      "anchor": {
+        "start": 355,
+        "end": 399,
+        "paragraph": 5,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": false,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": null,
+      "patterns": [],
+      "assessment": {
+        "status": "not_fact_checked",
+        "rationale": "Es una valoración subjetiva; no recibe un juicio de veracidad.",
+        "evidence": [],
+        "unresolved_reason": null,
+        "temporal_basis": "not_applicable",
+        "revision_note": null,
+        "causal_support": "not_causal",
+        "causal_limitations": null,
+        "calculations": []
+      }
+    }
+  ]
+}

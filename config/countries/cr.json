@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "country_code": "CR",
+  "name": "Costa Rica",
+  "verified_on": "2026-11-01",
+  "language": "es",
+  "status": "documentary_routes_only",
+  "reference": "skills/newsharness-factcheck/references/fuentes-cr.md",
+  "note": "Rutas iniciales de fuentes, no APIs implementadas. Abrir y verificar el documento relevante, su fecha, cobertura y condiciones de acceso. La jurisdicción depende de la afirmación, no sólo del medio."
+}

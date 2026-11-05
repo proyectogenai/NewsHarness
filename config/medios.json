@@ -1,0 +1,10 @@
+{
+  "schema_version": 2,
+  "verified_on": "2026-11-01",
+  "scope": "Medios con perfil de partida verificado. Se distribuye vacío: cada redacción agrega el suyo o lo configura desde el onboarding con su URL oficial. No es manual de estilo ni acreditación de cada periodista; el catálogo orienta, no restringe.",
+  "source_pack_status_definition": {
+    "curated": "Rutas documentales iniciales revisadas, no conectores API implementados ni verificación periodística certificada.",
+    "not_curated": "Medio catalogado; paquete de fuentes del país aún no preparado."
+  },
+  "outlets": []
+}

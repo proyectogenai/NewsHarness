@@ -1,0 +1,8 @@
+# Los anclajes de citas y CHECKSUMS.sha256 dependen de bytes exactos: forzar LF en todos los sistemas.
+* text=auto eol=lf
+
+# Fixtures binarios: nunca convertir.
+*.png binary
+*.pdf binary
+*.wav binary
+*.svg text eol=lf

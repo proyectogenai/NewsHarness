@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "kit_version": "0.1.0",
+  "artifacts": [
+    {
+      "id": "whisper-base-q5_1",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-base-q5_1.bin",
+      "sha256": "422f1ae452ade6f30a004d7e5c6a43195e4433bc370bf23fac9cc591f01a8898",
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "filename": "ggml-base-q5_1.bin",
+      "destination": "models",
+      "max_bytes": 59707625,
+      "size_bytes": 59707625,
+      "license": "MIT",
+      "source": "https://huggingface.co/api/models/ggerganov/whisper.cpp/revision/main?blobs=true",
+      "verified_at": "2026-11-01"
+    },
+    {
+      "id": "whisper-small-q5_1",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small-q5_1.bin",
+      "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb",
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "filename": "ggml-small-q5_1.bin",
+      "destination": "models",
+      "max_bytes": 190085487,
+      "size_bytes": 190085487,
+      "license": "MIT",
+      "source": "https://huggingface.co/api/models/ggerganov/whisper.cpp/revision/main?blobs=true",
+      "verified_at": "2026-11-01"
+    },
+    {
+      "id": "whisper-tiny-q5_1",
+      "url": "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-tiny-q5_1.bin",
+      "sha256": "818710568da3ca15689e31a743197b520007872ff9576237bda97bd1b469c3d7",
+      "revision": "5359861c739e955e79d9a303bcbc70fb988958b1",
+      "filename": "ggml-tiny-q5_1.bin",
+      "destination": "models",
+      "max_bytes": 32152673,
+      "size_bytes": 32152673,
+      "license": "MIT",
+      "source": "https://huggingface.co/api/models/ggerganov/whisper.cpp/revision/main?blobs=true",
+      "verified_at": "2026-11-01"
+    },
+    {
+      "id": "tesseract-spa-fast",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/spa.traineddata",
+      "sha256": "6f2e04d02774a18f01bed44b1111f2cd7f3ba7ac9dc4373cd3f898a40ea6b464",
+      "revision": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "filename": "spa.traineddata",
+      "destination": "tessdata",
+      "max_bytes": 2294433,
+      "size_bytes": 2294433,
+      "license": "Apache-2.0",
+      "source": "https://github.com/tesseract-ocr/tessdata_fast/blob/87416418657359cb625c412a48b6e1d6d41c29bd/spa.traineddata",
+      "verified_at": "2026-11-01"
+    },
+    {
+      "id": "whisper-vad-silero-v6.2.0",
+      "url": "https://huggingface.co/ggml-org/whisper-vad/resolve/9ffd54a1e1ee413ddf265af9913beaf518d1639b/ggml-silero-v6.2.0.bin",
+      "sha256": "2aa269b785eeb53a82983a20501ddf7c1d9c48e33ab63a41391ac6c9f7fb6987",
+      "revision": "9ffd54a1e1ee413ddf265af9913beaf518d1639b",
+      "filename": "ggml-silero-v6.2.0.bin",
+      "destination": "models",
+      "max_bytes": 885098,
+      "size_bytes": 885098,
+      "license": "MIT",
+      "source": "https://huggingface.co/api/models/ggml-org/whisper-vad/revision/main?blobs=true",
+      "verified_at": "2026-11-01"
+    }
+  ],
+  "status": "verified_model_data_only",
+  "note": "Modelos de datos verificados en fuentes oficiales. No incluye motores nativos ni sus dependencias. Descarga opt-in, sin ejecución ni instalación global."
+}

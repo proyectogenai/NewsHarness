@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "source_sha256": "db55124c602d485e3d187a58daadab7619fa58b878fde77de0a4b8bc066e6d62",
+  "metadata": {
+    "title": "Ejercicio sintético de entrevista",
+    "speaker": "Persona ficticia",
+    "medium": "Medio ficticio",
+    "program": null,
+    "interviewer": null,
+    "emitted_at": "2026-02-01",
+    "source_url": null,
+    "duration_seconds": null,
+    "provenance": "synthetic_fixture"
+  },
+  "analysis_as_of": "2026-11-01",
+  "coverage": {
+    "scope": "full_source",
+    "limitations": [
+      "Inventario preparado a mano para pruebas: no demuestra extracción automática ni exhaustividad en discursos reales.",
+      "Sin audio ni timestamps; se usan offsets y párrafos."
+    ]
+  },
+  "human_decisions": [],
+  "selection_decision_id": null,
+  "review_decision_id": null,
+  "sources": [],
+  "claims": [
+    {
+      "id": "C1",
+      "kind": "fact",
+      "quote_original": "En 2025 registramos 120 viajes, frente a 100 en 2024.",
+      "anchor": {
+        "start": 152,
+        "end": 205,
+        "paragraph": 2,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": true,
+      "causal_claim": false,
+      "reference_period": "2024–2025",
+      "due_at": null,
+      "patterns": [],
+      "assessment": null
+    },
+    {
+      "id": "C2",
+      "kind": "projection",
+      "quote_original": "Si la demanda continúa, estimamos 150 viajes para 2027.",
+      "anchor": {
+        "start": 225,
+        "end": 280,
+        "paragraph": 3,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": true,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": null,
+      "patterns": [],
+      "assessment": null
+    },
+    {
+      "id": "C3",
+      "kind": "promise",
+      "quote_original": "Prometo publicar el registro mensual antes del 31 de diciembre de 2026.",
+      "anchor": {
+        "start": 282,
+        "end": 353,
+        "paragraph": 4,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": false,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": "2026-12-31",
+      "patterns": [],
+      "assessment": null
+    },
+    {
+      "id": "C4",
+      "kind": "opinion",
+      "quote_original": "Creo que este es el mejor servicio del país.",
+      "anchor": {
+        "start": 355,
+        "end": 399,
+        "paragraph": 5,
+        "time_start_seconds": null,
+        "time_end_seconds": null,
+        "time_source": null
+      },
+      "display_quote": null,
+      "display_spans": [],
+      "display_edit_note": null,
+      "numeric": false,
+      "causal_claim": false,
+      "reference_period": null,
+      "due_at": null,
+      "patterns": [],
+      "assessment": null
+    }
+  ]
+}

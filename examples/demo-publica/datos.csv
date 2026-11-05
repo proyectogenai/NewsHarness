@@ -1,0 +1,7 @@
+registro_id,linea,periodo,viajes,servicios_programados,servicios_puntuales
+r001,Norte,2025-09,1000,100,80
+r002,Sur,2025-09,500,100,80
+r003,Norte,2026-09,1200,100,90
+r004,Sur,2026-09,600,100,90
+r003,Norte,2026-09,1200,100,90
+r005,Oeste,2026-09,,,

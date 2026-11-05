@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+work/
+workspace/
+output/
+models/
+tessdata/
+*.traineddata
+*.bin

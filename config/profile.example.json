@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "newsroom": "Medio de prueba ficticio",
+  "journalist": {
+    "name": "Persona de prueba",
+    "signature": "Persona de prueba",
+    "role": "periodista",
+    "section": "economía",
+    "formats": [
+      "noticia"
+    ]
+  },
+  "country": "AR",
+  "language": "es",
+  "timezone": "America/Argentina/Buenos_Aires",
+  "privacy": {
+    "allow_cloud_processing": false,
+    "allow_public_archiving": false
+  },
+  "publication": {
+    "human_approval_required": true
+  },
+  "rules": [],
+  "bylines": [],
+  "style": {
+    "tone": "Claro y sobrio; ejemplo ficticio, confirmar con el periodista.",
+    "number_style": "Ejemplo: 1.250,5; confirmar el criterio del medio.",
+    "date_style": "Ejemplo: 12 de octubre de 2026; confirmar."
+  },
+  "topics": [
+    "Ejemplo de economía"
+  ],
+  "source_policy": {
+    "preferred_domains": [],
+    "require_primary_source": true
+  }
+}

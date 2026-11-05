@@ -1,0 +1,13 @@
+EJERCICIO FICTICIO. No hay audio adjunto. Texto redactado para practicar cotejo; no demuestra precisión de ningún motor.
+Metadatos simulados aportados: entrevista del 8 de octubre de 2026; Voz A = periodista; Voz B = Elena Prado, directora del sistema. Las identidades son parte del supuesto del ejercicio, no se infirieron por sonido.
+
+[00:00:00] Voz A: ¿Ya terminaron las demoras?
+[00:00:04] Voz B: No eliminamos las demoras. Lo que vemos es una mejora en la puntualidad de Norte y Sur.
+[00:00:13] Voz A: ¿Cuánto invirtieron?
+[00:00:16] Voz B: Informamos una inversión de cien mil pesos en cartelería durante septiembre. Los comprobantes los tiene el área administrativa.
+[00:00:27] Voz A: ¿La aplicación explica todo el aumento?
+[00:00:31] Voz B: Todavía no hicimos un estudio para separar el efecto de la aplicación de otros factores.
+[00:00:40] Voz A: ¿Cuándo terminaron las obras de la terminal?
+[00:00:44] Voz B: [inaudible; se superponen voces]
+
+Fin del texto simulado. Los timestamps son ilustrativos; no están medidos contra un audio real.

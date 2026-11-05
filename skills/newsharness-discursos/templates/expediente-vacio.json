@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_sha256": "REEMPLAZAR_CON_SHA256_DEL_ORIGINAL_UTF8",
+  "metadata": {
+    "title": "COMPLETAR TÍTULO",
+    "speaker": null,
+    "medium": null,
+    "program": null,
+    "interviewer": null,
+    "emitted_at": null,
+    "source_url": null,
+    "duration_seconds": null,
+    "provenance": "user_supplied"
+  },
+  "analysis_as_of": "AAAA-MM-DD",
+  "coverage": {
+    "scope": "partial",
+    "limitations": [
+      "Completar qué material se recibió, qué falta y qué parte se inventarió."
+    ]
+  },
+  "human_decisions": [],
+  "selection_decision_id": null,
+  "review_decision_id": null,
+  "sources": [],
+  "claims": []
+}
