@@ -1,6 +1,6 @@
 # Adaptadores finos, un solo núcleo
 
-`skills/` es la fuente canónica. El instalador copia los diez packs completos, con referencias, a la ruta de descubrimiento del agente elegido. No se mantienen tres versiones distintas del método.
+`skills/` es la fuente canónica. El instalador copia los once packs completos, con referencias, a la ruta de descubrimiento del agente elegido. No se mantienen tres versiones distintas del método.
 
 | Agente | Descubrimiento en el proyecto | Instalación global (`--global`) | Puente de instrucciones (sólo proyecto) |
 |---|---|---|---|

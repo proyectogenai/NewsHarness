@@ -60,6 +60,7 @@ Cada agente tiene su propia instalación: si usás dos, hay que instalarlo en lo
 | **Trabajar con datos** | «¿Cuánto subió la canasta básica en un año?» | Baja la serie oficial, calcula con un script reproducible y te responde en lenguaje de nota, con la fuente para citar. |
 | **Consultar el INDEC** | «Traé la última pobreza por región» | Consulta la API oficial del INDEC con procedencia y signos convencionales (requiere registrarse en el INDEC para obtener un token personal). |
 | **Redactar y editar** | «Pasalo a newsletter» · «Dame cinco títulos» | Aplica tu perfil sin cambiar hechos, citas ni grados de certeza. Los cambios quedan a la vista. |
+| **Hacer un video** | «Armá un reel con esta frase de la entrevista» · «Ponele subtítulos» | Corta sin sacar la frase de contexto, reencuadra a vertical y pone subtítulos literales con estilo de redes. Te entrega el archivo para que lo revises. |
 | **Guardar versiones** | «Guardá esta versión» · «¿Qué cambié desde ayer?» | Usa git por vos, sin jerga y sin subir nada sin permiso. |
 
 ## Las skills
@@ -77,6 +78,7 @@ Una *skill* es un procedimiento que el agente carga cuando reconoce la tarea. No
 | `newsharness-python` | Calcular, cruzar y graficar con scripts reproducibles. |
 | `newsharness-indec` | Datos oficiales del INDEC (Argentina) por API. |
 | `newsharness-redaccion` | Redactar, editar, acortar y adaptar formatos. |
+| `newsharness-video` | Recortar, armar reels, subtítulos y títulos con material propio. |
 | `newsharness-git` | Versiones de borradores sin perder trabajo. |
 
 **Fuentes incluidas:** rutas documentales verificadas para **Argentina, México, Perú, Colombia y Costa Rica**, elegidas según el país del hecho y no el del medio. Para Argentina incluye INDEC, BCRA (API v4.0), Series de Tiempo de datos.gob.ar, Boletín Oficial y normativa. Otros países funcionan con el mismo método, sin rutas curadas todavía.
@@ -100,7 +102,7 @@ Los ejemplos de `examples/` son **ficticios**: sirven para probar el método sin
 - `AGENTS.md`: reglas editoriales comunes a todas las skills.
 - `skills/`: los procedimientos, con sus referencias.
 - `adapters/`: instrucciones particulares de Codex, Claude Code y OpenCode.
-- `scripts/`: instalador, diagnóstico, OCR, audio, validadores e INDEC.
+- `scripts/`: instalador, diagnóstico, OCR, audio, video, validadores e INDEC.
 - `config/`: países, catálogo de medios (vacío: cada redacción agrega el suyo) y artefactos fijados por SHA256.
 - `examples/`: ejercicios ficticios.
 - `tests/`: pruebas automatizadas (`python3 -m unittest discover -s tests`).
@@ -110,4 +112,4 @@ Los ejemplos de `examples/` son **ficticios**: sirven para probar el método sin
 
 Código, skills y documentación se publican bajo [licencia MIT](LICENSE): se pueden usar, adaptar y redistribuir en cualquier redacción conservando el aviso de copyright. Para aportar, ver [CONTRIBUTING.md](CONTRIBUTING.md); para reportar un problema de seguridad, [SECURITY.md](SECURITY.md).
 
-Los motores y modelos externos (Tesseract, whisper.cpp, FFmpeg, PDFium) tienen sus propias licencias y no se incluyen en el repositorio: ver [docs/TERCEROS.md](docs/TERCEROS.md). La skill del INDEC es una adaptación de [indec-api-skill](https://github.com/jonymusky/indec-api-skill) de Jony Musky (MIT).
+Los motores y modelos externos (Tesseract, whisper.cpp, FFmpeg, PDFium, HyperFrames) tienen sus propias licencias y no se incluyen en el repositorio: ver [docs/TERCEROS.md](docs/TERCEROS.md). La skill del INDEC es una adaptación de [indec-api-skill](https://github.com/jonymusky/indec-api-skill) de Jony Musky (MIT).

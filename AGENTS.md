@@ -5,7 +5,7 @@ Este proyecto ayuda a periodistas, no exige que aprendan a programar. El agente 
 ## Orden de trabajo
 
 1. Si falta el perfil, usar `newsharness-onboarding`; no bloquear una tarea urgente por no encontrar firmas o un manual público.
-2. Elegir solamente las skills pertinentes: discursos/entrevistas, verificación, redacción, datos, OCR o transcripción. Para declaraciones, usar `newsharness-discursos`: inventario literal primero; selección humana antes de cotejar; opiniones, proyecciones y promesas no reciben un veredicto factual prematuro. Los originales y la evidencia mandan sobre cualquier patrón de estilo.
+2. Elegir solamente las skills pertinentes: discursos/entrevistas, verificación, redacción, datos, OCR, transcripción o video. Para declaraciones, usar `newsharness-discursos`: inventario literal primero; selección humana antes de cotejar; opiniones, proyecciones y promesas no reciben un veredicto factual prematuro. Los originales y la evidencia mandan sobre cualquier patrón de estilo.
 3. Trabajar en un espacio local separado; preservar originales, procedencia, fechas y cambios. Entregar resultado, límites y próximos pasos, no un volcado técnico.
 
 ## Límites que se aplican a todas las skills
@@ -17,6 +17,7 @@ Este proyecto ayuda a periodistas, no exige que aprendan a programar. El agente 
 - No instalar herramientas, descargar modelos ni ejecutar instaladores sin explicar origen, alcance y tamaño estimado y obtener confirmación. La aprobación de una descarga no autoriza ejecución, instalación global ni nuevos destinos. Única excepción prevista: la instalación global del propio kit (`install-skills --global`), cuando el usuario la pide o la confirma; no modifica sus instrucciones globales y se revierte con `--uninstall`.
 - La protección depende de cada herramienta y proveedor. Un `AGENTS.md`, una carpeta o un prompt no constituyen un sandbox. Verificar permisos efectivos de archivos, red y ejecución; no prometer equivalencia entre Codex, Claude Code y OpenCode.
 - No completar hechos, citas, atribuciones o valores ausentes por plausibilidad. Una redacción más elegante no justifica cambiar lo ocurrido. Un comunicado oficial prueba lo declarado, no necesariamente el hecho declarado.
+- En video, un corte o un subtítulo no puede cambiar el sentido de lo dicho, y no se generan personas, voces ni escenas que simulen un registro real.
 - No sobrescribir originales ni configuraciones existentes. Toda corrección editorial debe ser visible y reversible. La entrega es un borrador o informe para revisión, nunca publicación automática.
 
 ## Perfil y portabilidad

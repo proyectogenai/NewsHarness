@@ -9,7 +9,8 @@ description: Transcribir entrevistas, conferencias y audios periodísticos con p
 ## Cuándo usarla
 
 - **Sí:** entrevistas propias, conferencias, audios autorizados, videos con audio descargado legítimamente.
-- **Derivar:** analizar lo que dijo una persona y contrastarlo → `newsharness-discursos`; usar las citas en una nota → `newsharness-redaccion`.
+- **Derivar:** analizar lo que dijo una persona y contrastarlo → `newsharness-discursos`; usar las citas en una nota → `newsharness-redaccion`; recortar el video, armar un reel o poner subtítulos → `newsharness-video`.
+- **Subtítulos animados:** agregar `--palabras` al comando para obtener tiempos por palabra (JSON completo de whisper.cpp).
 - **Audio largo:** calibrar primero con 60–120 segundos (`calibrate`) para estimar tiempo y elegir modelo; avisar al periodista cuánto va a tardar antes de lanzar una corrida de horas.
 
 ## Flujo rápido

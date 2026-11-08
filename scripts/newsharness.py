@@ -720,7 +720,7 @@ def wav_is_digital_silence(path):
                 return False
 
 
-def whisper_command(binary, model, audio, output_base, language, threads, vad_model=None):
+def whisper_command(binary, model, audio, output_base, language, threads, vad_model=None, word_json=False):
     if not re.fullmatch(r"[a-z]{2,3}", language):
         raise NewsHarnessError("Idioma de audio inválido: use es, pt o un código admitido por Whisper.")
     if type(threads) is not int or not 1 <= threads <= 64:
@@ -728,6 +728,9 @@ def whisper_command(binary, model, audio, output_base, language, threads, vad_mo
     command = [str(binary), "--model", str(model), "--file", str(audio), "--language", language,
                "--threads", str(threads), "--no-gpu", "--output-txt", "--output-srt", "--output-json",
                "--output-file", str(output_base)]
+    if word_json:
+        # JSON completo: segmentos con tokens y sus offsets, para subtítulos por palabra.
+        command.append("--output-json-full")
     if vad_model:
         command += ["--vad", "--vad-model", str(vad_model)]
     return command
@@ -742,7 +745,8 @@ def transcribe(args):
     ffmpeg, whisper = tool_required("ffmpeg"), tool_required("whisper-cli")
     help_output = run([whisper, "--help"], timeout=15, check=False)
     help_text = help_output.stdout + help_output.stderr
-    for required in ("--no-gpu", "--output-srt", "--output-json"):
+    word_json = bool(getattr(args, "word_timestamps", False))
+    for required in ("--no-gpu", "--output-srt", "--output-json") + (("--output-json-full",) if word_json else ()):
         if required not in help_text:
             raise NewsHarnessError(f"whisper-cli no documenta {required}. Use una versión revisada compatible; no se ejecutará con opciones supuestas.")
     vad = None
@@ -759,7 +763,7 @@ def transcribe(args):
         raise NewsHarnessError("Falta VAD local. Use fetch --artifact whisper-vad-silero-v6.2.0 --approve-download, o acepte explícitamente mayor riesgo con --allow-no-vad. No se descargó nada.")
     threads = args.threads or max(1, min(4, (os.cpu_count() or 1) - 1))
     # Validate language/threads before creating a job or invoking a decoder.
-    whisper_command(whisper, model, source, root, args.language, threads, vad)
+    whisper_command(whisper, model, source, root, args.language, threads, vad, word_json)
     snapshot, digest = preserve_original(root, source)
     job = new_job(root, "calibration" if args.command == "calibrate" else "transcription")
     audio = job / "audio-16k-mono.wav"
@@ -792,7 +796,7 @@ def transcribe(args):
             write_new(job / "transcript.srt", "")
             write_new(job / "transcript.json", json_text({"transcription": [], "status": "digital_silence_no_inference"}))
         else:
-            run(whisper_command(whisper, model, audio, job / "transcript", args.language, threads, vad), timeout=remaining)
+            run(whisper_command(whisper, model, audio, job / "transcript", args.language, threads, vad, word_json), timeout=remaining)
         for suffix in (".txt", ".srt", ".json"):
             if not (job / ("transcript" + suffix)).is_file():
                 raise NewsHarnessError(f"whisper-cli no generó transcript{suffix}; revise la versión. No hay entrega completa.")
@@ -1140,6 +1144,8 @@ def parser():
         command.add_argument("--allow-no-vad", action="store_true", help="Aceptación explícita del mayor riesgo sin VAD")
         command.add_argument("--timeout", type=positive_int, default=7200)
         command.add_argument("--sample-seconds", type=positive_int, default=90 if name == "calibrate" else None)
+        command.add_argument("--palabras", dest="word_timestamps", action="store_true",
+                             help="JSON completo con tiempos por palabra (para subtítulos de video)")
     command = commands.add_parser("fetch", help="Descargar un modelo fijado con SHA256 y autorización explícita")
     command.add_argument("--workspace", required=True)
     command.add_argument("--artifact", required=True)

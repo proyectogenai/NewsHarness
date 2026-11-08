@@ -1,5 +1,13 @@
 # Cambios de la v0.1
 
+## Video · 8 de noviembre de 2026
+
+- Nueva skill `newsharness-video`: recortar video o audio propio, armar reels, subtítulos con estilo de redes y títulos o zócalos. Reglas propias: el corte no cambia el sentido, el subtítulo es una cita literal del transcript revisado, el original no se toca, nada sintético presentado como real, derechos del material y entrega para revisión.
+- Nuevo `scripts/video.py`, sin dependencias de Python: `subtitulos` (transcript → `.ass` con estilos resaltado, karaoke o frase), `palabras` (lista de palabras para HyperFrames), `cortes` (plan con el texto antes, dentro y después de cada corte; sólo ejecuta con `--ejecutar` y deja registro con SHA256) y `quemar`. No sobrescribe ni usa la red.
+- `transcribe --palabras` pide a whisper.cpp el JSON completo con tiempos por palabra.
+- Referencias: recetas de FFmpeg, criterios de subtítulos, HyperFrames (render local, telemetría desactivada, sin funciones de HeyGen) y formatos por red.
+- Remotion se evaluó y se descartó por su licencia para empresas de más de 3 personas (ver [TERCEROS.md](TERCEROS.md)).
+
 ## Versión neutral para compartir · 4 de noviembre de 2026
 
 - Se publica como proyecto abierto independiente de cualquier medio. El catálogo `config/medios.json` se distribuye vacío y se retiran las herramientas y referencias propias de un medio. Las rutas de fuentes por país (AR, MX, PE, CO, CR) y la skill del INDEC no cambian.

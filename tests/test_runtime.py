@@ -267,6 +267,13 @@ class SubprocessTests(unittest.TestCase):
         self.assertNotIn("--vad", newsharness.whisper_command("w", "m", "a", "o", "es", 1))
         self.assertIn("--vad", newsharness.whisper_command("w", "m", "a", "o", "es", 1, "vad.bin"))
 
+    def test_word_timestamps_only_when_requested(self):
+        self.assertNotIn("--output-json-full", newsharness.whisper_command("w", "m", "a", "o", "es", 1))
+        args = newsharness.whisper_command("w", "m", "a", "o", "es", 1, None, True)
+        self.assertIn("--output-json-full", args)
+        self.assertIn("--output-json", args)
+        self.assertNotIn("--translate", args)
+
 
 class ModelTests(TemporaryTest):
     def fake_model(self, quality="base", vocab=51865, ftype=2009):

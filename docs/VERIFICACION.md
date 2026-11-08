@@ -41,7 +41,7 @@ Descarga real y verificación SHA256 del modelo español por el ejecutor del kit
 
 ## Agentes
 
-Se entregan diez skills con frontmatter validado, referencias y adaptadores de descubrimiento para Codex, Claude Code y OpenCode. El instalador conserva configuración existente y copia una versión de soporte del kit al proyecto.
+Se entregan once skills con frontmatter validado, referencias y adaptadores de descubrimiento para Codex, Claude Code y OpenCode. El instalador conserva configuración existente y copia una versión de soporte del kit al proyecto.
 
 **No se ha realizado una sesión end-to-end en los tres agentes comerciales.** Copiar los archivos o pasar un test de instalación no prueba invocación automática, permisos, búsquedas web ni compatibilidad de todas sus versiones.
 
@@ -66,6 +66,12 @@ Se incorporaron rutas documentales de Perú, Colombia y Costa Rica a las ya exis
 Se revisó el código de indec-api-skill (commit `0a95ccc`) antes de adaptarlo; no se ejecutó el original. La spec pública `https://api.indec.gob.ar/api/openapi?v=2` respondió sin token y se incluyó en el kit; tiene las mismas 19 tablas y columnas que el snapshot del repositorio original. Sin token, `/v1/ipc_nacional` respondió 401, como documenta el INDEC. Se ejecutaron en vivo `tablas`, `columnas`, la sugerencia de nombres (`canasta_crianza`, `Periodo`), el aviso de token faltante y `comparar-spec` (sin cambios estructurales).
 
 **No se hizo ninguna consulta de datos con token**: no hubo cuenta del INDEC en esta prueba. La paginación, los reintentos, las etiquetas de comercio exterior, el rechazo de redirecciones y el resguardo del token se probaron con un servidor simulado (13 pruebas). Validar con un token real antes de distribuir: una consulta mensual (`ipc_nacional`), una semestral (`pobreza_eph`) y una de comercio exterior con `--etiquetas`.
+
+## Video · 8 de noviembre de 2026
+
+`scripts/video.py` tiene 14 pruebas. Trece no usan FFmpeg ni red: tiempos, unión de tokens de whisper.cpp en palabras, SRT y JSON por frases, rechazo de karaoke sin tiempos por palabra, encabezado y colores del `.ass`, cortes de bloque, recorte con corrimiento de tiempos, caracteres de control, no sobrescritura, plan de cortes con contexto y validación de la lista. La decimocuarta corre con FFmpeg real cuando está instalado: genera un video de prueba, corta 2,6 s, reencuadra a 9:16, quema los subtítulos y comprueba que el original no cambió. En Windows 11 con FFmpeg 8.0 pasó.
+
+**No se miró el resultado**: el agente no ve video. Legibilidad, zona segura y estética requieren revisión humana. **No se instaló ni se ejecutó HyperFrames**: la guía se basa en su repositorio y documentación (`v0.9.22`). No se probó `transcribe --palabras` con un whisper.cpp real.
 
 ## Fuentes de Argentina · 3 de noviembre de 2026
 

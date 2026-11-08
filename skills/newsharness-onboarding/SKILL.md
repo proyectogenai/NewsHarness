@@ -67,6 +67,7 @@ Presentarla en lenguaje de redacción, con un ejemplo de pedido por línea:
 - **Escribir o editar:** «Pasá este material a una nota de 4.000 caracteres».
 - **Datos:** «¿Cuánto subió la canasta básica en un año?» · «Bajá la serie de inflación de datos.gob.ar» · «Traé del INDEC la última pobreza por región» (requiere token personal del INDEC).
 - **Documentos y audio:** «Sacá el texto de este PDF escaneado» · «Desgrabá esta entrevista».
+- **Video:** «Armá un reel de 40 segundos con esta frase» · «Ponele subtítulos a este clip».
 - **Versiones:** «Guardá esta versión» · «¿Qué cambié desde ayer?».
 
 Cerrar con una primera tarea sugerida usando el material ficticio del kit, y recordar que nada se publica ni se envía sin su autorización.

@@ -5,8 +5,8 @@ import importlib.util
 import unittest
 ROOT=Path(__file__).resolve().parents[1]
 class ContentContractTests(unittest.TestCase):
-    def test_ten_skills_have_frontmatter(self):
-        paths=list((ROOT/'skills').glob('*/SKILL.md'));self.assertEqual(len(paths),10)
+    def test_eleven_skills_have_frontmatter(self):
+        paths=list((ROOT/'skills').glob('*/SKILL.md'));self.assertEqual(len(paths),11)
         for p in paths:
             text=p.read_text(encoding="utf-8");self.assertTrue(text.startswith('---\n'),p)
             front=text.split('---',2)[1]
