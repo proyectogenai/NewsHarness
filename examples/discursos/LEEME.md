@@ -1,18 +1,14 @@
-# Ejemplo central: analizar discursos y entrevistas
+# Ejemplo: analizar discursos y entrevistas
 
-La **fuente central real elegida por el usuario** es este video: [https://youtu.be/6KxqkedLOO4](https://youtu.be/6KxqkedLOO4). El documento aportado `prompt-chequeador-discursos-milei.md` sirve como referencia metodológica, pero el caso mencionado dentro de ese documento es distinto de la fuente elegida después.
+## Ejercicio sintético
 
-El expediente debe registrar qué se pudo abrir y verificar de ese video. **No transferirle frases, números o minutos del prompt.** El enlace por sí solo no habilita un inventario literal: para extraer citas hace falta acceso al contenido o una transcripción autorizada. Cualquier acceso faltante se declara, sin reconstruir palabras desde títulos, resúmenes o memoria. Para verificar afirmaciones también hace falta la selección de la persona responsable.
-
-## Ficha real disponible
-
-Ver [caso-real-ditella/LEEME.md](caso-real-ditella/LEEME.md): metadatos contrastados, extracto oficial breve y enlace al segmento 43:36 del panel de transcripción. El audio no fue escuchado, no hay inventario completo ni veredicto. La fecha del discurso (30/10/2026) se distingue de la publicación del video (31/10/2026). Los tiempos exactos de la cita permanecen `null`.
-
-## Prueba técnica separada
-
-El ejercicio de transcripción e inventario incluido para probar el módulo está rotulado **SINTÉTICO**. Los emisores, declaraciones y datos de ese ejercicio no describen a personas o instituciones reales. No usarlo como evidencia periodística ni como resultado del caso aportado.
+La carpeta [ejercicio-sintetico/](ejercicio-sintetico/) contiene una transcripción, un inventario, un registro de evidencia y un informe **inventados** para probar el módulo. Los emisores, declaraciones y datos no describen a personas o instituciones reales. No usarlo como evidencia periodística.
 
 La prueba permite comprobar que se conservan citas literales, que las anclas corresponden al texto, que un tiempo desconocido permanece `null`, que se separan tipos de afirmación y que una aprobación humana no se presume. Los resultados de esas comprobaciones no demuestran exhaustividad ni verdad factual.
+
+## Con un discurso real
+
+Para extraer citas hace falta acceso al contenido: el audio, el video o una transcripción autorizada. Un enlace por sí solo no alcanza. Cualquier acceso faltante se declara, sin reconstruir palabras desde títulos, resúmenes o memoria. Para verificar afirmaciones también hace falta la selección de la persona responsable.
 
 ## Cómo pedirlo al agente
 

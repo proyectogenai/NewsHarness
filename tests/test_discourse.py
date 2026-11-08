@@ -29,17 +29,6 @@ class DiscourseTests(unittest.TestCase):
         self.assertEqual(D.validate(self.source, self.report, 'research'), [])
         self.assertEqual(D.validate(self.source, self.report, 'reviewed'), [])
 
-    def test_real_case_is_partial_pending_not_fact_verified(self):
-        folder = ROOT / 'examples/discursos/caso-real-ditella'
-        source = (folder / 'extracto-oficial.txt').read_bytes().decode()
-        report = json.loads((folder / 'inventario-fragmento.json').read_text(encoding="utf-8"))
-        self.assertEqual(D.validate(source, report), [])
-        self.assertEqual(report['coverage']['scope'], 'partial')
-        self.assertIsNone(report['selection_decision_id'])
-        self.assertIsNone(report['claims'][0]['assessment'])
-        self.assertIsNone(report['claims'][0]['anchor']['time_start_seconds'])
-        self.assertEqual(report['sources'][0]['independence_group'], report['sources'][1]['independence_group'])
-
     def test_original_hash_and_exact_quote(self):
         self.invalid(source=self.source + '\n', contains='original')
         self.report['claims'][0]['quote_original'] = 'Una cita mejorada inventada'

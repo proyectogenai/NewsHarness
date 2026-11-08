@@ -18,7 +18,7 @@ Preservar el original → inventario literal anclado → **la persona elige qué
 
 Aplicar a cualquier persona, gobierno, empresa u organización con el mismo criterio. La función no es confirmar una tesis política, diagnosticar intenciones ni encontrar un número prefijado de errores. Un patrón de comparación es una **hipótesis de análisis**, no un veredicto.
 
-Leer las reglas comunes del proyecto. Usar `newsharness-onboarding` para el perfil y `newsharness-transcripcion` cuando haya audio autorizado. Para cotejos detallados, complementar con `newsharness-factcheck` y `newsharness-datos`. El caso aportado y sus límites están en [caso-aportado.md](references/caso-aportado.md).
+Leer las reglas comunes del proyecto. Usar `newsharness-onboarding` para el perfil y `newsharness-transcripcion` cuando haya audio autorizado. Para cotejos detallados, complementar con `newsharness-factcheck` y `newsharness-datos`.
 
 ## 1. Recibir, delimitar y preservar
 

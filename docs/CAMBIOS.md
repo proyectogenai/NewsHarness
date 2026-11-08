@@ -50,7 +50,7 @@ Esta revisión actualiza el mismo paquete; no requiere configurar perfiles de pe
 ## Analista de discursos y entrevistas · nueva revisión de v0.1
 
 - Nueva séptima skill `newsharness-discursos`, plantillas de ingreso/inventario/evidencia/informe/revisión y esquema JSON.
-- Ejemplo central: video de Milei en Universidad Torcuato Di Tella aportado por el usuario. Ficha real parcial documentada, sin trasplantar las frases de otro caso incluido en el prompt metodológico. Ejercicio sintético separado para pruebas.
+- Ejercicio sintético para pruebas, sin atribuir frases a personas reales.
 - Inventario literal → selección humana → evidencia fechada/versionada → informe → revisión de versión concreta. Opiniones, proyecciones y promesas separadas del chequeo factual.
 - Catálogo neutral de hipótesis contrastables, no etiquetas de engaño ni causalidades preestablecidas. Dato pertinente a la fecha, con revisiones posteriores explícitas.
 - Validador offline `scripts/validate_discourse.py`: anclas, cortes, precisión temporal, consistencia de estados y hash de revisión. No comprueba la verdad, la exhaustividad ni la identidad humana, ni autoriza publicar.
