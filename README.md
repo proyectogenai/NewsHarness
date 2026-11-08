@@ -4,7 +4,7 @@
 
 Funciona con **Claude Code, Codex y OpenCode**. Está pensado para periodistas que no programan: vos pedís en lenguaje de redacción («chequeá las cifras de esta nota», «desgrabá la entrevista», «¿cuánto subió la canasta básica en un año?») y el agente hace la parte técnica.
 
-> Prototipo v0.1 en evaluación. No pertenece a ningún medio ni está certificado. Ver [qué se probó y qué no](docs/VERIFICACION.md).
+> Desarrollado desde una redacción para agilizar el trabajo periodístico diario. Es un proyecto en desarrollo (versión 0.1): [qué se probó y qué falta](docs/VERIFICACION.md).
 
 ## El problema que resuelve
 
