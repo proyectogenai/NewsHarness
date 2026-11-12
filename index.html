@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Empezá a explorar NewsHarness, un kit de IA para el trabajo periodístico.">
+<title>NewsHarness · Empezá con el kit</title>
+<style>
+:root{color-scheme:light;--paper:#faf8f2;--ink:#222;--ochre:#e5af42}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:18px/1.6 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:56px 24px}header{display:flex;align-items:center;gap:16px}svg{width:64px;height:64px;flex:none}small{letter-spacing:.12em;font-size:12px}h1{font-size:clamp(40px,8vw,64px);line-height:1.08;letter-spacing:-.04em;margin:30px 0 20px}p{max-width:610px}ol{padding-left:24px}li{padding:4px 0}.box{margin:32px 0;padding:24px;background:#fffdf7;border:2px solid var(--ink);border-radius:10px 14px 8px 12px;box-shadow:5px 5px 0 #e5af4238}label{display:block;font-weight:700;margin-bottom:12px}textarea{display:block;width:100%;min-height:380px;resize:vertical;background:transparent;border:1px solid #c9c3b8;border-radius:5px;padding:14px;font:16px/1.55 system-ui,sans-serif;color:var(--ink)}button{margin-top:16px;padding:14px 22px;background:var(--ochre);color:var(--ink);border:2px solid var(--ink);border-radius:6px;font:700 17px system-ui;cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #916700;outline-offset:4px}a{color:inherit;text-underline-offset:4px}.note{font-size:15px;color:#68645c}#status{min-height:24px;font-size:15px;margin:8px 0 0}footer{border-top:1px solid #d6d0c4;margin-top:40px;padding-top:20px;font-size:15px}
+</style>
+<main>
+<header><svg viewBox="0 0 80 80" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 29V17q0-6 7-6h18q7 0 7 6v12"/><path fill="#e5af42" d="M12 29l55-1 2 36-57 2z"/><path d="M13 42l55-1M34 39v10h13V39M20 57l9-1M53 56h7"/></svg><small>UN KIT PARA EL TRABAJO PERIODÍSTICO</small></header>
+<h1>Probá NewsHarness.</h1>
+<p>Prepará tu agente de IA con contexto, reglas, habilidades y herramientas para trabajar con método periodístico.</p>
+<ol><li>Copiá las instrucciones de abajo.</li><li>Abrí Claude Code, Codex u OpenCode en una carpeta vacía y pegalas ahí.</li><li>Cuando termine, cerrá y volvé a abrir el agente. Pedile: «Configurá mi perfil de NewsHarness».</li></ol>
+<p class="note">Estas instrucciones instalan el kit para tu agente. Si falta Python u otra herramienta, el agente debe explicártelo y pedirte permiso antes de instalarla. Cada agente necesita su propia instalación.</p>
+<section class="box" aria-label="Instrucciones para tu agente">
+<label for="prompt">Este es el texto para tu agente</label>
+<textarea id="prompt" readonly>Quiero instalar NewsHarness, un kit open source para periodistas, para usarlo en todas mis consultas.
+El repositorio oficial es https://github.com/proyectogenai/NewsHarness
+
+1. Descargá el kit SÓLO de ese repositorio, en esta carpeta: con "git clone" si tengo git, o si no
+   bajando https://github.com/proyectogenai/NewsHarness/archive/refs/heads/main.zip y descomprimiéndolo.
+   No uses otra fuente ni otra copia.
+2. Comprobá los archivos con CHECKSUMS.sha256. Si alguno no coincide, frená y avisame.
+3. Leé README.md, AGENTS.md y el adaptador de tu agente en adapters/.
+4. Instalalo de forma global con el instalador del kit:
+   python3 scripts/newsharness.py install-skills --global --agent &lt;claude | codex | opencode, según el agente que sos&gt;
+   (en Windows puede ser "py -3" en lugar de "python3").
+5. No modifiques mis instrucciones globales (CLAUDE.md, AGENTS.md) ni otros archivos míos.
+6. Si falta Python u otra herramienta, explicame qué es, de dónde viene y cuánto pesa, y esperá mi OK antes de instalarla.
+7. Al terminar, decime en lenguaje simple qué quedó instalado, cómo se actualiza, cómo se desinstala
+   y cómo empiezo la configuración de mi perfil.</textarea>
+<button id="copy" type="button">Copiar instrucciones</button><p id="status" role="status" aria-live="polite"></p>
+</section>
+<p>El kit ayuda a organizar el trabajo. La verificación de los datos y la decisión de publicar siguen en manos del periodista.</p>
+<footer><a href="https://github.com/proyectogenai/NewsHarness">Ver el repositorio en GitHub ↗</a></footer>
+</main>
+<script>
+const promptBox=document.getElementById('prompt');const statusText=document.getElementById('status');
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(promptBox.value);statusText.textContent='Copiado. Ahora pegalo en tu agente.';}catch(e){promptBox.focus();promptBox.select();promptBox.setSelectionRange(0,promptBox.value.length);statusText.textContent='Seleccionamos el texto. Usá la opción Copiar de tu dispositivo.';}});
+</script>
+</html>
